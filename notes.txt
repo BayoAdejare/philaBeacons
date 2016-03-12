@@ -1,0 +1,2 @@
+install postgres
+install ez_setup.py to install dependencies for postgres
