@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'beacons'
+    'beacons.apps.BeaconsConfig',
+    'rest_framework',
+    'djng'
 ]
 
 MIDDLEWARE_CLASSES = [

@@ -1,2 +1,5 @@
 install postgres
 install ez_setup.py to install dependencies for postgres
+
+superuser: PhilaMuseumAdmin
+password: PowerofArt2016
