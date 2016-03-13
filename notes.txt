@@ -1,5 +1,29 @@
+[About Django]
 Django framework is used as the backend for communication with the frontend which uses angular framework.
 Django communicates with the database which uses sqlite3 for local development and postgres for actual server.
+
+[About Angular]
+
+[Installation]
+
+pip install -r requirements.txt
+
+[Configuration]
+
+Load the initial data in the <href=https://docs.djangoproject.com/en/1.9/howto/initial-data/>fixtures</href> for the Django database by using:
+
+python manage.py loaddata <fixturename>
+
+For example:
+
+python manage.py loaddata PMAPowerofArtHackathon-collectiondata.json
+
+python manage.py loaddata PMAPowerofArtHackathon-ibeacons.json
+
+python manage.py loaddata PMAPowerofArtHackathon-locations.json
+
+
+
 The database models include a user class which has ...
 
 install postgres

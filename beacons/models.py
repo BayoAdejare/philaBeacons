@@ -7,7 +7,7 @@ global minor
 
 # Create your models here.
 class Location(models.Model):
-    name = models.IntegerField(default=0)
+    name = models.TextField()
     floor = models.TextField()
     type = models.TextField()
 

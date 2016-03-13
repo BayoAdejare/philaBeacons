@@ -49,5 +49,16 @@ $(window).load(function() { // makes sure the whole site is loaded
 <script src="{{ STATIC_URL }}beacons/js/ng/controllers.js"></script>
 <script src="{{ STATIC_URL }}beacons/js/ng/directives.js"></script>
 <script src="{{ STATIC_URL }}beacons/js/ng/factories.js"></script>
+
+<script type="text/javascript">
+  // This allows you to access the current user id in your angular controllers.
+  angular
+      .module('beacons.services')
+      .factory('AuthUser', function() {
+        return {
+          id: "{{ user.id|default:''}}"
+        }
+      });
+</script>
 </body>
 </html>
