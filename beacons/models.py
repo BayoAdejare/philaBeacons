@@ -1,11 +1,15 @@
 from django.db import models
 
+global alias
+global major
+global minor
+
 # Create your models here.
-class User(models.Model):
-    name = models.TextField()
-    collection = models.TextField()
-    like_count = models.IntegerField(default=0)
-    share_count = models.IntegerField(default=0)
+class Location(models.Model):
+    name = models.IntegerField(default=0)
+    floor =  models.TextField()
+    type =  models.TextField()
+
 
 class Collection(models.Model):
     ObjectID = models.CharField(max_length=128, null=False, blank=True, unique=True)
@@ -18,10 +22,10 @@ class Collection(models.Model):
     ArtistName5 = models.CharField(max_length=128, null=False, blank=True, unique=True)
     ArtistName6 = models.CharField(max_length=128, null=False, blank=True, unique=True)
     ArtistName7 = models.CharField(max_length=128, null=False, blank=True, unique=True)
-    TitleofWork1 = models.CharField(max_length=128, null=False, blank=True, unique=True)
-    TitleofWork2 = models.CharField(max_length=128, null=False, blank=True, unique=True)
-    TitleofWork3 = models.CharField(max_length=128, null=False, blank=True, unique=True)
-    TitleofWork4 = models.CharField(max_length=128, null=False, blank=True, unique=True)
+    TitleOfWork1 = models.CharField(max_length=128, null=False, blank=True, unique=True)
+    TitleOfWork2 = models.CharField(max_length=128, null=False, blank=True, unique=True)
+    TitleOfWork3 = models.CharField(max_length=128, null=False, blank=True, unique=True)
+    TitleOfWork4 = models.CharField(max_length=128, null=False, blank=True, unique=True)
     Date = models.CharField(max_length=128, null=False, blank=True, unique=True)
     DateSearchBegin = models.CharField(max_length=128, null=False, blank=True, unique=True)
     DateSearchEnd = models.CharField(max_length=128, null=False, blank=True, unique=True)
