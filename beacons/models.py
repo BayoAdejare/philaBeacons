@@ -1,11 +1,13 @@
 from django.db import models
 
-global alias
-global major
-global minor
-
 
 # Create your models here.
+class IBeacons(models.Model):
+    alias = models.TextField()
+    major = models.IntegerField()
+    minor = models.IntegerField()
+
+
 class Location(models.Model):
     name = models.TextField()
     floor = models.TextField()
