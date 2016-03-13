@@ -5,12 +5,6 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^dashboard/$', 'beacons.views.dashboard', name='dashboard'),
-    url(r'^report/$', 'beacons.views.report', name='report'),
-    url(r'^checkin/$', 'beacons.views.checkin_beacon', name='checkin'),
-    url(r'^beacon/(.*)$', 'beacons.views.get_beacon', name='home'),
-    url(r'^$', 'beacons.views.dashboard', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
+    url(r'^$', 'beacons.views.index', name='home'),
     url(r'^admin/', include(admin.site.urls)),
 )
