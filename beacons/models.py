@@ -39,6 +39,4 @@ class Collection(models.Model):
     Latitude = models.CharField(max_length=128, null=False, blank=True, unique=True)
     Longitude = models.CharField(max_length=128, null=False, blank=True, unique=True)
     CreditLine = models.CharField(max_length=128, null=False, blank=True, unique=True)
-    PMAURL = models.CharField(max_length=128, null=False, blank=True, unique=True)
-
-
+    PMAURL = models.URLField(max_length=128, null=False, blank=True, unique=True)

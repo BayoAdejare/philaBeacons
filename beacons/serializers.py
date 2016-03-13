@@ -14,16 +14,18 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
         model = Group
         fields = ('url', 'name')
 
+
 class LocationSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Location
         fields = ('name', 'floor', 'type')
 
+
 class CollectionSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Collection
         fields = (
-        'ObjectID', 'ObjectNumber', 'ImageFilename', 'ArtistName1', 'ArtistName2', 'ArtistName3', 'ArtistName4',
-        'ArtistName5', 'ArtistName6', 'ArtistName7', 'TitleOfWork1', 'TitleOfWork2', 'TitleOfWork3', 'TitleOfWork4',
-        'Date', 'DateSearchBegin', 'DateSearchEnd', 'Medium', 'Materials', 'Techniques', 'Support', 'Dimensions',
-        'GalleryLocation', 'Geography', 'Latitude', 'Longitude', 'CreditLine', 'PMAURL')
+            'ObjectID', 'ObjectNumber', 'ImageFilename', 'ArtistName1', 'ArtistName2', 'ArtistName3', 'ArtistName4',
+            'ArtistName5', 'ArtistName6', 'ArtistName7', 'TitleOfWork1', 'TitleOfWork2', 'TitleOfWork3', 'TitleOfWork4',
+            'Date', 'DateSearchBegin', 'DateSearchEnd', 'Medium', 'Materials', 'Techniques', 'Support', 'Dimensions',
+            'GalleryLocation', 'Geography', 'Latitude', 'Longitude', 'CreditLine', 'PMAURL')

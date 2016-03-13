@@ -10,6 +10,23 @@ from django.template import Context
 
 
 # Create your views here.
+def index(request):
+    '''
+     give overview of user's collection
+    '''
+    all_users = User.objects.all()
+    all_groups = Group.objects.all()
+    all_locations = Location.objects.all()
+    all_collections = Collection.objects.all()
+    html = {
+        'users': all_users,
+        'groups': all_groups,
+        'locations': all_locations,
+        'collections': all_collections
+    }
+    return render(request, 'beacons/index.html', html)
+
+
 class UserViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
@@ -43,15 +60,4 @@ class CollectionViewSet(viewsets.ModelViewSet):
         obj.owner = self.request.user
 
 
-def index(request):
-    '''
-     give overview of user's collection
-    '''
-    all_users = User.objects.all()
-    t = get_template('beacons/index.html')
-    html = t.render(Context({
-        'users': all_users,
-        'name_count': len(all_users),
-        'half_count': len(all_users) / 2 + 1
-    }))
-    return HttpResponse(html)
+
