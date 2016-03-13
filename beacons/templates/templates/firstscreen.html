@@ -1,0 +1,77 @@
+<div id="first-screen" ng-show="currentNav.firstscreen">
+	<div ng-controller="customKeyInputCtrl as ctrl" layout="column">
+		<div>
+			<h3>How are you Feeling Today?</h3>
+			</label>Enter some keywords or use some songs/emoticons below</label>
+			  <md-content class="md-padding" layout="column">
+			 	<md-chips ng-model="ctrl.selectedKeywords" md-autocomplete-snap="" md-transform-chip="ctrl.transformChip($chip)" md-require-match="ctrl.autocompleteRequireMatch">
+			      <md-autocomplete md-selected-item="ctrl.selectedItem" md-search-text="ctrl.searchText" md-items="item in ctrl.querySearch(ctrl.searchText)" md-item-text="item.name" placeholder="Search for a keyword">
+			        <span md-highlight-text="ctrl.searchText">{{item.name}}</span>
+			     </md-autocomplete>
+			     <md-chip-template>
+			        <span>
+			          <strong>{{$chip.name}}</strong>
+			        </span>
+			     </md-chip-template>
+			    </md-chips>
+			  </md-content>
+		</div>
+		<div style="align-self: center;">
+			<md-menu style="float: left;">
+			  <md-button md-no-ink aria-label="fromButton" class="md-button md-primary" ng-click="$mdOpenMenu($event)">
+			    <i class="icon_lnr_music2"></i> Songs</md-icon>
+			  </md-button>
+			  <md-menu-content style="padding: 10px;">
+			  	<md-menu-item ng-repeat="song in music.songs">
+			      <md-button ng-model="music.selected" value="song_{{song.id}}" ng-click="">
+			        <md-icon md-font-icon="icon_lnr_music"></md-icon>
+			        {{song.title}} <label>by</label> {{song.artist}}.
+			      </md-button>
+			    </md-menu-item>
+			  </md-menu-content>
+			</md-menu>
+			<md-menu  style="float: left;">
+			  <md-button md-no-ink aria-label="fromButton" class="md-button md-primary" ng-click="$mdOpenMenu($event)">
+			    <i class="icon_lnr_music2"></i>Emoticons</md-icon>
+			  </md-button>
+			  <md-menu-content style="padding: 10px;">
+			  	<md-menu-item ng-repeat="emo in emos.options">
+			      <md-button aria-label="{{emo.name}} "ng-model="music.selected" value="song_{{emo.id}}" ng-click="transformChipEmo(emo.name)">
+			        <img src="SVG/{{emo.icon}}" style="height: 40px; width: 40px; margin: 5px;"></md-icon>
+			      </md-button>
+			    </md-menu-item>
+			  </md-menu-content>
+			</md-menu>
+		</div> 
+		<br>
+	</div>
+   <!--End keyword Inputs-->
+	<div ng-controller='timeCtrl'>
+		<h3>I'll be visiting for:</h3>
+		<md-slider-container>
+			<div class="firstinput">
+				<md-input-container>
+		        	<input flex="" step=".5" type="number" ng-model="totalTime" aria-label="TotalTime" aria-controls="totalTime-slider">
+		      	</md-input-container><span>hours</span>
+	      	</div>
+	      	<md-slider flex="" min=".5" max="12" ng-model="totalTime" aria-label="totalTime" id="totalTime-slider">
+	      </md-slider>
+	    </md-slider-container>
+	    </div>
+		<br>
+		<h3>I'll visit each work of art for:</h3>
+		<md-slider-container>
+			<div class="firstinput">
+				<md-input-container>
+		        	<input flex="" step="5" type="number" ng-model="artTime" aria-label="artTime" aria-controls="artTime-slider">
+		      	</md-input-container><span>minutes</span>
+	      		</div>
+	      	<md-slider flex="" min="15" max="120" ng-model="artTime" step="15" aria-label="artTime" id="artTime-slider">
+	      </md-slider>
+	    </md-slider-container>
+	    <div nav-data style="width: 100%; text-align: center;" ng-controller="topCtrl">
+			<md-button class="action_button md-raised md-primary" ng-click="currentNav.firstscreen = false; currentNav.swipescreen = true;" class="md-primary"> <i class="icon_lnr_library"></i> Find Me Some Art
+		</md-button>
+		</div>
+	</div>
+</div>

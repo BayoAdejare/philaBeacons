@@ -1,5 +1,6 @@
+Django framework is used as the backend for communication with the frontend which uses angular framework.
+Django communicates with the database which uses sqlite3 for local development and postgres for actual server.
+The database models include a user class which has ...
+
 install postgres
 install ez_setup.py to install dependencies for postgres
-
-superuser: PhilaMuseumAdmin
-password: PowerofArt2016

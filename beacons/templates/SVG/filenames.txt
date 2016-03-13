@@ -1,0 +1,44 @@
+ Volume in drive C is Windows
+ Volume Serial Number is FEB0-6089
+
+ Directory of c:\Apache\htdocs\museum\SVG
+
+03/12/2016  11:47 AM    <DIR>          .
+03/12/2016  11:47 AM    <DIR>          ..
+02/25/2015  07:02 PM             2,303 angel.svg
+02/25/2015  07:02 PM             2,439 angry.svg
+02/25/2015  07:02 PM             2,724 cap.svg
+02/25/2015  07:02 PM             2,647 clown.svg
+02/25/2015  07:02 PM             2,272 confused.svg
+02/25/2015  07:02 PM             4,222 cool.svg
+02/25/2015  07:02 PM             2,373 crying.svg
+02/25/2015  07:02 PM             2,966 cyber.svg
+02/25/2015  07:02 PM             1,972 depression.svg
+02/25/2015  07:02 PM             3,709 dislike.svg
+02/25/2015  07:02 PM             2,419 eyeglass.svg
+03/12/2016  11:47 AM                 0 filenames.txt
+02/25/2015  07:02 PM             1,771 gay.svg
+02/25/2015  07:02 PM             3,352 geek.svg
+02/25/2015  07:02 PM             1,945 happy.svg
+02/25/2015  07:02 PM             2,094 humor.svg
+02/25/2015  07:02 PM             2,758 kiss.svg
+02/25/2015  07:02 PM             1,994 laughing.svg
+02/25/2015  07:02 PM             3,442 like.svg
+02/25/2015  07:01 PM             3,094 love.svg
+02/25/2015  07:01 PM             4,374 money.svg
+02/25/2015  07:01 PM             3,728 mustache.svg
+02/25/2015  07:01 PM             2,192 punk.svg
+02/25/2015  07:01 PM             2,062 robot.svg
+02/27/2015  10:55 AM             5,930 security.svg
+02/25/2015  07:01 PM             2,006 sleepi.svg
+02/25/2015  07:01 PM             2,363 smarth.svg
+02/25/2015  07:01 PM             2,721 smile.svg
+02/25/2015  07:01 PM             4,606 star.svg
+02/25/2015  07:01 PM             3,831 sunglass.svg
+02/25/2015  07:01 PM             4,221 sunglass_2.svg
+02/25/2015  07:01 PM             2,425 sunglass_3.svg
+02/25/2015  07:01 PM             1,344 surprise.svg
+02/25/2015  07:01 PM             2,738 tongue.svg
+02/25/2015  07:01 PM             1,952 wink.svg
+              35 File(s)         96,989 bytes
+               2 Dir(s)  12,074,479,616 bytes free
