@@ -17,7 +17,7 @@ class Location(models.Model):
 class Collection(models.Model):
     ObjectID = models.CharField(max_length=128, null=False, blank=True, unique=True)
     ObjectNumber = models.CharField(max_length=128, null=False, blank=True, unique=True)
-    ImageFilename = models.ImageField(upload_to="%Y/%m/%d")
+    ImageFilename = models.CharField(max_length=128, null=False, blank=True, unique=True)
     ArtistName1 = models.CharField(max_length=128, null=False, blank=True, unique=True)
     ArtistName2 = models.CharField(max_length=128, null=False, blank=True, unique=True)
     ArtistName3 = models.CharField(max_length=128, null=False, blank=True, unique=True)

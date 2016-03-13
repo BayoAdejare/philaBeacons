@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'beacons.apps.BeaconsConfig',
     'rest_framework',
-    'djng'
+    'beacons.apps.BeaconsConfig'
 ]
 
 REST_FRAMEWORK = {
