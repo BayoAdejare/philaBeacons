@@ -1,19 +1,15 @@
 from django.shortcuts import render
-from django.shortcuts import render_to_response
 from beacons.serializers import UserSerializer, GroupSerializer, LocationSerializer, CollectionSerializer
 from rest_framework import viewsets
 from django.contrib.auth.models import User, Group
-from django.http import HttpResponse
 from beacons.models import Location, Collection
-from django.template.loader import get_template
-from django.template import Context
 
 
 # Create your views here.
 def index(request):
-    '''
-     give overview of user's collection
-    '''
+    """
+     Give overview of user's collection.
+    """
     all_users = User.objects.all()
     all_groups = Group.objects.all()
     all_locations = Location.objects.all()
@@ -42,6 +38,7 @@ class GroupViewSet(viewsets.ModelViewSet):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
 
+
 class LocationViewSet(viewsets.ModelViewSet):
     queryset = Location.objects.all()
     serializer_class = LocationSerializer
@@ -58,6 +55,3 @@ class CollectionViewSet(viewsets.ModelViewSet):
     def pre_save(self, obj):
         assert isinstance(self.request.user, object)
         obj.owner = self.request.user
-
-
-

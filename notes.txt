@@ -4,7 +4,7 @@ The database models include a user class which has ...
 
 install postgres
 install ez_setup.py to install dependencies for postgres
-User
+Profile
 Group
 Location
 Collection

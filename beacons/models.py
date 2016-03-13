@@ -4,17 +4,18 @@ global alias
 global major
 global minor
 
+
 # Create your models here.
 class Location(models.Model):
     name = models.IntegerField(default=0)
-    floor =  models.TextField()
-    type =  models.TextField()
+    floor = models.TextField()
+    type = models.TextField()
 
 
 class Collection(models.Model):
     ObjectID = models.CharField(max_length=128, null=False, blank=True, unique=True)
     ObjectNumber = models.CharField(max_length=128, null=False, blank=True, unique=True)
-    ImageFilename = models.CharField(max_length=128, null=False, blank=True, unique=True)
+    ImageFilename = models.ImageField(upload_to="%Y/%m/%d")
     ArtistName1 = models.CharField(max_length=128, null=False, blank=True, unique=True)
     ArtistName2 = models.CharField(max_length=128, null=False, blank=True, unique=True)
     ArtistName3 = models.CharField(max_length=128, null=False, blank=True, unique=True)
