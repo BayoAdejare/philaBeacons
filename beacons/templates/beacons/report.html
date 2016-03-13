@@ -1,0 +1,25 @@
+{% extends "tracking/base.html" %}
+
+{% block title %}Report{% endblock %}
+
+{% block content %}
+    <h1 id="navbar">Team Rankings</h1>
+    <h1 class="col-lg-offset-1">
+                    Teams
+                </h1>
+        {% for user in users%}
+            {% ifchanged %}
+                <h1 class="col-lg-offset-2 table-bordered">
+                    {{ user.dept }}
+                </h1>
+            {% endifchanged %}
+            <ul>
+            <li class="col-lg-offset-3">
+                {{ user.name }} - Potential Infection Events : {{ user.dirty_count }}
+            </li>
+            </ul>
+        </h1>
+        {% endfor %}
+
+{% endblock %}
+</div>
