@@ -1,10 +1,12 @@
-from django.conf.urls import *
+from django.conf.urls import url, include
 from rest_framework import routers
-from beacons import views
+from . import views
 
 router = routers.DefaultRouter()
 router.register(r'collection', views.CollectionViewset)
 
-urlpatterns = patterns('',
-                       url(r'^api/', include(router.urls)),
-                       )
+app_name = 'beacons'
+urlpatterns = [
+    url(r'^$', views.index, name='index'),
+    url(r'^api/', router.urls, name='api'),
+]

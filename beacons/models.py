@@ -7,7 +7,7 @@ class User(models.Model):
     like_count = models.IntegerField(default=0)
     share_count = models.IntegerField(default=0)
 
-class Collection(models.Models):
+class Collection(models.Model):
     ObjectID = models.CharField(max_length=128, null=False, blank=True, unique=True)
     ObjectNumber = models.CharField(max_length=128, null=False, blank=True, unique=True)
     ImageFilename = models.CharField(max_length=128, null=False, blank=True, unique=True)

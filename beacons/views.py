@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.shortcuts import render_to_response
 from beacons.serializers import CollectionSerializer
 from beacons.permissions import IsOwnerOrReadOnly
+from rest_framework import viewsets
 from django.http import HttpResponse
 from beacons.models import User, Collection
 from django.template.loader import get_template
@@ -9,12 +10,13 @@ from django.template import Context
 
 
 # Create your views here.
-class CollectionViewset(viewsets.ModelViewset):
+class CollectionViewset(viewsets.ModelViewSet):
     queryset = Collection.objects.all()
     serializer_class = CollectionSerializer
     permission_classes = (IsOwnerOrReadOnly,)
 
     def pre_save(self, obj):
+        assert isinstance(self.request.user, object)
         obj.owner = self.request.user
 
 def index(request):

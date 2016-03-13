@@ -4,7 +4,6 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-                       # Examples:
-                       url(r'^$', 'beacons.views.index', name='home'),
+                       url(r'^beacons/', include('beacons.urls')),
                        url(r'^admin/', include(admin.site.urls)),
                        )
